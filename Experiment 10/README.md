@@ -31,7 +31,7 @@ In this lab:
 - LAN network: `192.168.1.0/24`
 - pfSense LAN address: `192.168.1.1/24`
 
-![pfSense console showing network addresses](Screenshots/step_1_pfsense_console.png)
+![pfSense console showing network addresses](Screenshot/step_1_pfsense_console(1).png)
 
 ### 2. Open the pfSense WebConfigurator
 
@@ -43,7 +43,7 @@ https://192.168.1.1
 
 Sign in with the credentials configured for the laboratory environment.
 
-![pfSense sign-in page](Screenshots/step_2_pfsense_login.png)
+![pfSense sign-in page](Screenshot/step_2_pfsense_login(1).png)
 
 ### 3. Review the LAN firewall rules
 
@@ -55,7 +55,7 @@ Review the source, destination, protocol, action, logging option, and rule order
 
 Before testing, verify that ICMP is allowed and that no higher-priority rule unexpectedly blocks traffic.
 
-![LAN firewall rules](Screenshots/step_3_firewall_rules.png)
+![LAN firewall rules](Screenshot/step_3_firewall_rules(1).png)
 
 ### 4. Verify Kali's network configuration
 
@@ -72,7 +72,7 @@ Confirm that Kali has an address on the pfSense LAN. The test system used in thi
 192.168.1.10/24
 ```
 
-![Kali network interface and IP address](Screenshots/step_4_kali_network.png)
+![Kali network interface and IP address](Screenshot/step_4_kali_network(1).png)
 
 ### 5. Enable Snort monitoring on the LAN interface
 
@@ -84,7 +84,7 @@ Enable Snort on the pfSense **LAN** interface and save the settings. Keep **Bloc
 
 After saving, check that the interface status shows Snort running.
 
-![Snort interface status](Screenshots/step_5_snort_interface.png)
+![Snort interface status](Screenshot/step_5_snort_interface(1).png)
 
 ### 6. Generate controlled ICMP test traffic
 
@@ -104,7 +104,7 @@ sudo nmap -sS -Pn 192.168.1.1
 
 > Use the Nmap example only inside an authorized lab network.
 
-![Ping test from Kali to pfSense](Screenshots/step_6_ping_test.png)
+![Ping test from Kali to pfSense](Screenshot/step_6_ping_test(1).png)
 
 ### 7. Verify the alerts
 
@@ -116,7 +116,7 @@ Select the LAN interface and refresh the list. Match alerts to the test time and
 
 For an alert-only setup, successful ping replies and an IDS event can occur together.
 
-![Snort alert log showing ICMP events](Screenshots/step_7_snort_alerts.png)
+![Snort alert log showing ICMP events](Screenshot/step_7_snort_alerts(1).png)
 
 ## Improvements Added
 
